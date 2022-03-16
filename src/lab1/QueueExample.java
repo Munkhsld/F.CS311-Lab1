@@ -14,6 +14,10 @@ public class QueueExample {
 		}
 	}
 	
+	public int getHead() throws Exception {
+		return q.element();
+	}
+	
 	public static void main(String[] args) {
 		
 		System.out.println("------------------------------------------------------------");
@@ -30,6 +34,13 @@ public class QueueExample {
 		}
 		
 		QueueExample q = new QueueExample(intArray);
+		
+		try {
+			System.out.println(" The head of queue is: " + q.getHead());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println(" The queue is empty.");
+		}
 		
 	}
 	
