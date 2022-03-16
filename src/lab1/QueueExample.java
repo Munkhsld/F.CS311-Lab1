@@ -14,15 +14,15 @@ public class QueueExample {
 		}
 	}
 	
-	public int getHead() throws Exception {
+	public int tolgoi() throws Exception {
 		return q.element();
 	}
 	
-	public Boolean isEmpty() {
+	public Boolean hoosonEseh() {
 		return q.isEmpty();
 	}
 	
-	public int getSize() {
+	public int hemjee() {
 		return q.size();
 	}
 	
@@ -44,15 +44,15 @@ public class QueueExample {
 		QueueExample q = new QueueExample(intArray);
 		
 		try {
-			System.out.println(" The head of queue is: " + q.getHead());
+			System.out.println(" The head of queue is: " + q.tolgoi());
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			System.out.println(" The queue is empty.");
 		}
 		
-		System.out.println(" The queue is empty: " + q.isEmpty());
+		System.out.println(" The queue is empty: " + q.hoosonEseh());
 		
-		System.out.println(" The size of queue is: " + q.getSize());
+		System.out.println(" The size of queue is: " + q.hemjee());
 		
 		
 	}
