@@ -22,6 +22,10 @@ public class QueueExample {
 		return q.isEmpty();
 	}
 	
+	public int getSize() {
+		return q.size();
+	}
+	
 	public static void main(String[] args) {
 		
 		System.out.println("------------------------------------------------------------");
@@ -47,6 +51,9 @@ public class QueueExample {
 		}
 		
 		System.out.println(" The queue is empty: " + q.isEmpty());
+		
+		System.out.println(" The size of queue is: " + q.getSize());
+		
 		
 	}
 	
