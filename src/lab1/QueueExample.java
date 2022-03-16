@@ -1,6 +1,9 @@
 package lab1;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 import java.util.Scanner;
 
@@ -8,7 +11,7 @@ public class QueueExample {
 
 	Queue<Integer> q = new LinkedList<>();
 
-	public QueueExample(int[] values) {
+	public QueueExample(List<Integer> values) {
 		for (int value: values) {
 			q.add(value);
 		}
@@ -26,6 +29,25 @@ public class QueueExample {
 		return q.size();
 	}
 	
+	public int suul() throws Exception {
+		
+		if (hoosonEseh()) {
+			throw new IndexOutOfBoundsException();
+		}
+		
+		Iterator<Integer> itr = q.iterator();
+		int last = 0;
+		
+        while (itr.hasNext())
+        {
+            // next() returns the next element in the iteration
+            last = itr.next();
+        }
+        
+        return last;
+        
+	}
+	
 	public static void main(String[] args) {
 		
 		System.out.println("------------------------------------------------------------");
@@ -35,10 +57,13 @@ public class QueueExample {
 		String numbers = in.nextLine();
 		
 		String[] strArray = numbers.split(" ");
-		int[] intArray = new int[strArray.length];
+		
+		List<Integer> intArray = new ArrayList<Integer>();
 
 		for (int i=0;i<strArray.length;i++) {
-			intArray[i] = Integer.valueOf(strArray[i]);
+			if (!strArray[i].isEmpty()) {
+				intArray.add(Integer.valueOf(strArray[i].trim()));
+			}
 		}
 		
 		QueueExample q = new QueueExample(intArray);
@@ -54,6 +79,12 @@ public class QueueExample {
 		
 		System.out.println(" The size of queue is: " + q.hemjee());
 		
+		try {
+			System.out.println(" The tail of queue is: " + q.suul());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println(" The queue is empty.");
+		}
 		
 	}
 	
