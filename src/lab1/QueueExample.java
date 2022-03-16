@@ -18,6 +18,10 @@ public class QueueExample {
 		return q.element();
 	}
 	
+	public Boolean isEmpty() {
+		return q.isEmpty();
+	}
+	
 	public static void main(String[] args) {
 		
 		System.out.println("------------------------------------------------------------");
@@ -41,6 +45,8 @@ public class QueueExample {
 			// TODO Auto-generated catch block
 			System.out.println(" The queue is empty.");
 		}
+		
+		System.out.println(" The queue is empty: " + q.isEmpty());
 		
 	}
 	
